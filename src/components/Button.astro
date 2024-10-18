@@ -1,0 +1,17 @@
+---
+const { isRed = false } = Astro.props
+---
+<div class="items-center space-x-1 inline-flex px-2 rounded hover:bg-blue-400 transition-colors bg-blue-300 text-white"
+class:list={{"bg-red-500 hover:bg-red-950": isRed}}
+>
+
+    <slot name="start-icon"/>
+
+    <slot name="Text">
+        Aceptar
+    </slot>
+
+    <slot name="Text2"/>
+    
+    <slot name="end-icon"/>
+</div>
